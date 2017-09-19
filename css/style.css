@@ -48,7 +48,7 @@ body {
 }
 
 .home-header {
-  background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(255, 0, 0, 0.2) 50%), url(../images/scotland.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(255, 0, 0, 0.2) 50%), url(../images/scotland.JPG);
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 120px;
