@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
 
 .navbar .nav.pull-right {
-    float: right;
-    margin-right: 100px; /*set margin this way in your custom styesheet*/
-  }
+  float: right;
+  margin-right: 100px; /*set margin this way in your custom styesheet*/
+}
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #777;
-  }
+  color: #777;
+}
 
 .nav {
   text-align: center;
@@ -21,17 +21,17 @@
 }
 
 .nav-tabs>li>a:hover, .nav>li>a:focus, .nav>li>a:hover {
-    border-color: transparent !important;
-    background-color: transparent !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .active {
-    font-weight: bold;
-    text-decoration: underline;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
+  display: block;
 }
 
 @media (min-width: 979px) {
@@ -50,6 +50,7 @@ body {
 .home-header {
   background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(255, 0, 0, 0.2) 50%), url(../images/scotland.JPG);
   background-size: cover;
+  height: 100vh;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -60,6 +61,7 @@ body {
   padding-left: 250px;
   padding-right: 250px;
   padding-bottom: 100px;
+  min-height: 100vh;
 }
 
 .me {
@@ -67,32 +69,40 @@ body {
   max-height: 150px;
   margin: 0 auto;
   display: block;
-  border: 2px solid lightgray;
-  box-shadow: 0 0 10px 0px black;
+  /*border: 2px solid lightgray;*/
+  /*box-shadow: 0 0 10px 0px black;*/
   border-radius: 100%;
   margin-bottom: 40px;
   object-fit: cover;
   object-position: top;
 }
 
+#about {
+  background-color: #78A1CB;
+}
+
+#about h2 {
+  color: #ffffff;
+}
+
 #experience {
-  padding: 100px 0px;
+  padding: 150px 0px;
   text-align: center;
-  background-color: #393739;
-  font-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .company-logo {
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 200px;
+  max-height: 75px;
   margin: 0 auto;
   display: inline;
-  border: 2px solid lightgray;
-  box-shadow: 0 0 10px 0px black;
+  /*border: 2px solid lightgray;
+  box-shadow: 0 0 10px 0px black;*/
 }
 
 .experience-table {
   background-color: #ffffff;
+  padding: 50px;
 }
 
 .travel-pic {
@@ -100,8 +110,8 @@ body {
   max-height: 300px;
   margin: 0 auto;
   display: inline;
-  border: 2px solid lightgray;
-  box-shadow: 0 0 10px 0px black;
+  /*border: 2px solid lightgray;
+  box-shadow: 0 0 10px 0px black;*/
 }
 
 .travel-table {
@@ -114,14 +124,46 @@ body {
   background-color: #EBEBEB;
 }
 
+#travel h2 {
+  padding-bottom: 40px;
+}
+
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th:hover span.text-content {
+  opacity: 1;
+}
+
 h1 {
-    font-size: 70px;
-    text-align: center;
-    padding: 0px 100px 0px 100px;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-    color: #EBEBEB;
-    /*text-shadow: 10px 10px 20px rgba(255,0,0,0.6);*/
+  font-size: 70px;
+  text-align: center;
+  padding: 0px 100px 0px 100px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #EBEBEB;
+  /*text-shadow: 10px 10px 20px rgba(255,0,0,0.6);*/
 }
 
 h2 {
@@ -176,37 +218,53 @@ table {
 /* desktop style rules */
 @media screen and (min-width: 500px) {
   .me {
-    width: 200px;
+    width: 150px;
   }
 }
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
-  .home-header .about-me {
+  .home-header #about {
     width: 700px;
+    min-height: 100vh;
+  }
+  .section {
+    padding: 100px 20px;
   }
 }
 
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
-  .home-header .about-me {
+  .home-header #about {
     width: 500px;
+    min-height: 100vh;
+  }
+  .section {
+    padding: 80px 20px;
   }
 }
 
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .home-header {
+    width: 400px;
+    min-height: 100vh;
+  }
+  .me {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  /* For a screen < 540px, this CSS will be read */
+  .home-header {
     width: 300px;
+    min-height: 100vh;
   }
-  h1, h2, h3 {
-    font-size: 30px;
-  }
-  h4 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 12px;
+  .me {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -230,9 +288,10 @@ a:hover {
 }
 
 footer {
-  height: 50px;
-  text-align: center;
-  padding: 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
